@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&family=Orbitron:wght@700;800;900&family=Syncopate:wght@700&display=swap');
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Dodger';
+  src: url('/fonts/dodger3_2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Inter", "Noto Sans Georgian", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-orbitron: 'Orbitron', sans-serif;
+  --font-syncopate: 'Syncopate', sans-serif;
+  --font-dodger: 'Dodger', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #000000;
+  font-family: "Inter", "Noto Sans Georgian", ui-sans-serif, system-ui, sans-serif;
+}
+
+body, button, input, select, textarea {
+  font-family: "Inter", "Noto Sans Georgian", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Custom Animation Utility Helpers */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Custom scrollbar styling to match the premium dark theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E1E24;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00F2FE;
+}
+
+/* Realistic Neon sign faulty-flicker animation */
+@keyframes neonFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.55)) drop-shadow(0 0 14px rgba(59, 130, 246, 0.35));
+  }
+  19%, 21%, 54%, 56% {
+    opacity: 0.25;
+    filter: drop-shadow(0 0 1px rgba(0, 242, 254, 0.05));
+  }
+  20%, 24%, 55% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 4px rgba(0, 242, 254, 0.25));
+  }
+  72%, 76% {
+    opacity: 1;
+  }
+  73%, 75% {
+    opacity: 0.15;
+    filter: none;
+  }
+  74% {
+    opacity: 0.8;
+    filter: drop-shadow(0 0 5px rgba(0, 242, 254, 0.3));
+  }
+}
+
+.animate-neon-flicker {
+  animation: neonFlicker 3s linear infinite;
+}
+

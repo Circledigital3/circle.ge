@@ -287,7 +287,7 @@ export const TRANSLATIONS: Record<'en' | 'ka', TranslationDictionary> = {
     contactFormLabelService: 'საჭირო მიმართულება',
     contactFormLabelBudget: 'ყოველთვიური სარეკლამო ბიუჯეტი',
     contactFormLabelMessage: 'პროექტის მიზანი და თქვენი ხედვა',
-    contactFormDragDrop: 'ჩააგდეთ პროექტის აღწერა, ბრიფი ან დოკუმენტები აქ, ან',
+    contactFormDragDrop: 'ატვირთეთ პროექტის აღწერა, ბრიფი ან დოკუმენტი აქ ან,',
     contactFormBrowse: 'მოძებნეთ ფაილი',
     contactFormSubmit: 'გაგზავნა',
     contactFormSubmitting: 'კავშირის გაშვება...',

@@ -284,7 +284,7 @@ export default function ContactForm({ lang, translate, preselectedService = '', 
               {/* Advanced Drag and Drop File Attachments Panel */}
               <div className="space-y-2">
                 <label className="text-xs font-sans font-bold text-gray-500 uppercase tracking-wider block">
-                  {lang === 'en' ? 'Optional Attachments' : 'ფაილების მიმაგრება'}
+                  {lang === 'en' ? 'Optional Attachments' : 'ფაილის ატვირთვა'}
                 </label>
 
                 {/* Drag Area */}

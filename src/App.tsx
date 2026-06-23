@@ -68,21 +68,46 @@ export default function App() {
                 transition={{ duration: 0.7, delay: 0.28 }}
                 className="text-gray-400 text-base sm:text-lg max-w-xl leading-relaxed whitespace-pre-line"
               >
-                {lang === 'ka' && translate.heroSub.includes('შენი მარკეტინგის წრე.') ? (
-                  <>
-                    {translate.heroSub.split('შენი მარკეტინგის წრე.')[0]}
-                    <span className="font-semibold text-white">შენი მარკეტინგის წრე.</span>
-                    {translate.heroSub.split('შენი მარკეტინგის წრე.')[1] || ''}
-                  </>
-                ) : lang === 'ka' && translate.heroSub.includes('შენი მარკეტინგის წრე') ? (
-                  <>
-                    {translate.heroSub.split('შენი მარკეტინგის წრე')[0]}
-                    <span className="font-semibold text-white">შენი მარკეტინგის წრე</span>
-                    {translate.heroSub.split('შენი მარკეტინგის წრე')[1] || ''}
-                  </>
-                ) : (
-                  translate.heroSub
-                )}
+                {(() => {
+                  const circleParts = translate.heroSub.split('Circle');
+                  const result: React.ReactNode[] = [];
+                  circleParts.forEach((part, index) => {
+                    if (index > 0) {
+                      result.push(
+                        <span key={`circle-${index}`} className="text-[#00F2FE] font-extrabold filter drop-shadow-[0_0_8px_rgba(0,242,254,0.4)]">
+                          Circle
+                        </span>
+                      );
+                    }
+                    
+                    if (lang === 'ka') {
+                      if (part.includes('შენი მარკეტინგის წრე.')) {
+                        const subParts = part.split('შენი მარკეტინგის წრე.');
+                        result.push(
+                          <span key={`group-dot-${index}`}>
+                            {subParts[0]}
+                            <span className="font-semibold text-white">შენი მარკეტინგის წრე.</span>
+                            {subParts[1] || ''}
+                          </span>
+                        );
+                      } else if (part.includes('შენი მარკეტინგის წრე')) {
+                        const subParts = part.split('შენი მარკეტინგის წრე');
+                        result.push(
+                          <span key={`group-${index}`}>
+                            {subParts[0]}
+                            <span className="font-semibold text-white">შენი მარკეტინგის წრე</span>
+                            {subParts[1] || ''}
+                          </span>
+                        );
+                      } else {
+                        result.push(<React.Fragment key={`text-${index}`}>{part}</React.Fragment>);
+                      }
+                    } else {
+                      result.push(<React.Fragment key={`text-${index}`}>{part}</React.Fragment>);
+                    }
+                  });
+                  return result;
+                })()}
               </motion.p>
 
               {/* Interactive buttons matching CTA layout */}

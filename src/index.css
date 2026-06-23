@@ -92,3 +92,30 @@ body, button, input, select, textarea {
   animation: neonFlicker 3s linear infinite;
 }
 
+/* Premium smooth cosmic breathing glow */
+@keyframes luxuryLogoGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.5)) drop-shadow(0 0 12px rgba(106, 0, 255, 0.3)) drop-shadow(0 0 25px rgba(0, 242, 254, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(0, 242, 254, 0.85)) drop-shadow(0 0 24px rgba(106, 0, 255, 0.65)) drop-shadow(0 0 40px rgba(0, 242, 254, 0.35));
+  }
+}
+
+@keyframes logoGradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-luxury-logo {
+  animation: luxuryLogoGlow 3.5s ease-in-out infinite, logoGradientFlow 4s ease-in-out infinite;
+  background-size: 200% auto;
+}
+

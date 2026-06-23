@@ -82,7 +82,7 @@ export default function Header({ lang, setLang, translate }: HeaderProps) {
             id="logo-wrapper"
           >
             {/* Directly write circle in Dodger font */}
-            <span className="font-dodger text-3xl sm:text-4xl tracking-[0.05em] bg-gradient-to-r from-[#00F2FE] via-[#3B82F6] to-[#6A00FF] bg-clip-text text-transparent filter drop-shadow-[0_0_8px_rgba(0,242,254,0.3)] duration-300 group-hover:scale-105 transition-transform animate-neon-flicker">
+            <span className="font-dodger text-3xl sm:text-4xl tracking-[0.05em] bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent transition-all duration-500 group-hover:scale-[1.06] group-hover:tracking-[0.07em] animate-luxury-logo">
               circle
             </span>
           </div>
@@ -153,30 +153,38 @@ export default function Header({ lang, setLang, translate }: HeaderProps) {
 
       {/* Mobile Menu Backdrop & Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 z-40 top-20 bg-[#000000] border-t border-[#1E1E24]/50 backdrop-blur-lg animate-fade-in">
-          <div className="px-4 py-6 space-y-4">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToSection(item.href);
-                }}
-                className="block px-4 py-3 rounded-lg text-base font-sans font-medium text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-[#6A00FF]/10 hover:to-[#3B82F6]/5 hover:border-l-2 hover:border-[#00F2FE] transition-all"
-              >
-                {item.label}
-              </a>
-            ))}
-            
-            <div className="pt-4 border-t border-[#1E1E24]/60">
-              <button
-                onClick={() => scrollToSection('#contact')}
-                className="w-full flex items-center justify-center gap-2 py-3.5 rounded-full bg-gradient-to-r from-[#6A00FF] to-[#3B82F6] text-base font-sans font-semibold text-white"
-              >
-                {translate.navStartProject}
-                <Sparkles className="w-4 h-4" />
-              </button>
+        <div className="md:hidden fixed inset-0 z-40 top-20 bg-black/50 border-t border-white/5 backdrop-blur-xl animate-fade-in">
+          {/* Interactive colored glass highlights inside the backdrop */}
+          <div className="absolute top-16 left-1/4 w-32 h-32 bg-[#6A00FF]/15 rounded-full blur-[40px] pointer-events-none -z-10" />
+          <div className="absolute top-36 right-1/4 w-32 h-32 bg-[#00F2FE]/15 rounded-full blur-[40px] pointer-events-none -z-10" />
+
+          {/* Elevated Glassmorphic Card Container */}
+          <div className="m-5 p-5 rounded-2xl bg-black/60 border border-white/10 backdrop-blur-2xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.8)] relative z-50">
+            <div className="space-y-3">
+              {navItems.map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection(item.href);
+                  }}
+                  className="group block px-5 py-3.5 rounded-xl text-base font-sans font-bold text-[#00F2FE] hover:text-white bg-white/[0.03] border border-white/5 hover:border-[#00F2FE]/40 hover:bg-[#00F2FE]/5 active:bg-[#00F2FE]/10 transition-all duration-300 flex items-center justify-between"
+                >
+                  <span>{item.label}</span>
+                  <span className="text-[#00F2FE]/60 group-hover:text-white group-hover:translate-x-1 transition-all duration-300 font-mono">→</span>
+                </a>
+              ))}
+              
+              <div className="pt-5 mt-4 border-t border-white/10">
+                <button
+                  onClick={() => scrollToSection('#contact')}
+                  className="w-full flex items-center justify-center gap-2 py-4 rounded-full bg-gradient-to-r from-[#6A00FF] to-[#3B82F6] text-base font-sans font-bold text-white shadow-[0_4px_14px_rgba(106,0,255,0.4)] hover:shadow-[0_6px_20px_rgba(106,0,255,0.6)] hover:scale-[1.01] active:scale-[0.99] transition-all"
+                >
+                  {translate.navStartProject}
+                  <Sparkles className="w-4 h-4 text-[#00F2FE]" />
+                </button>
+              </div>
             </div>
           </div>
         </div>

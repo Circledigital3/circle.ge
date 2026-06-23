@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&family=Orbitron:wght@700;800;900&family=Syncopate:wght@700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/dodger');
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Noto+Sans+Georgian:wght@300;400;500;600;700;800;900&family=Orbitron:wght@700;800;900&family=Syncopate:wght@700&display=swap');
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Dodger';
-  src: url('/fonts/dodger3_2.ttf') format('truetype');
+  font-family: 'DodgerLocal';
+  src: url('../public/fonts/dodger3_2semital.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -14,7 +15,16 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
   --font-orbitron: 'Orbitron', sans-serif;
   --font-syncopate: 'Syncopate', sans-serif;
+  --font-audiowide: 'Audiowide', sans-serif;
   --font-dodger: 'Dodger', sans-serif;
+}
+
+.font-dodger {
+  font-family: 'Dodger', sans-serif !important;
+}
+
+.font-retro {
+  font-family: 'Audiowide', sans-serif !important;
 }
 
 html {

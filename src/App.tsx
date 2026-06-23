@@ -55,7 +55,7 @@ export default function App() {
                 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-extra-black tracking-tight leading-[1.15] text-white"
               >
                 {translate.heroHeadingBefore}{' '}
-                <span className="inline-block bg-gradient-to-r from-[#00F2FE] via-[#3B82F6] to-[#6A00FF] bg-clip-text text-transparent font-dodger tracking-[0.05em] text-[0.95em] filter drop-shadow-[0_0_8px_rgba(0,242,254,0.25)]">
+                <span className="inline-block bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent font-dodger tracking-[0.05em] text-[0.78em] filter drop-shadow-[0_0_12px_rgba(0,242,254,0.35)] animate-luxury-logo">
                   circle
                 </span>
                 {translate.heroHeadingAfter}
@@ -74,7 +74,7 @@ export default function App() {
                   circleParts.forEach((part, index) => {
                     if (index > 0) {
                       result.push(
-                        <span key={`circle-${index}`} className="text-[#00F2FE] font-extrabold filter drop-shadow-[0_0_8px_rgba(0,242,254,0.4)]">
+                        <span key={`circle-${index}`} className="text-white font-medium">
                           Circle
                         </span>
                       );
@@ -200,7 +200,7 @@ export default function App() {
                 </div>
                 
                 {/* Gradient Styled Dodger ircle Text */}
-                <span className="font-dodger text-5xl sm:text-6xl md:text-7xl lg:text-7xl tracking-snug bg-gradient-to-r from-[#00F2FE] via-[#3B82F6] to-[#6A00FF] bg-clip-text text-transparent filter drop-shadow-[0_0_10px_rgba(0,242,254,0.25)] -ml-10 sm:-ml-12 md:-ml-14 z-10">
+                <span className="font-dodger text-4xl sm:text-5xl md:text-6xl lg:text-6xl tracking-snug bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent filter drop-shadow-[0_0_10px_rgba(0,242,254,0.25)] -ml-10 sm:-ml-12 md:-ml-14 z-10 animate-luxury-logo">
                   ircle
                 </span>
               </div>

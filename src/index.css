@@ -124,8 +124,26 @@ body, button, input, select, textarea {
   }
 }
 
-.animate-luxury-logo {
+.animate-headline-glow {
   animation: luxuryLogoGlow 3.5s ease-in-out infinite, logoGradientFlow 4s ease-in-out infinite;
   background-size: 200% auto;
+}
+
+.animate-gradient-only {
+  animation: logoGradientFlow 4s ease-in-out infinite;
+  background-size: 200% auto;
+}
+
+.animate-luxury-logo {
+  animation: logoGradientFlow 4s ease-in-out infinite;
+  background-size: 200% auto;
+  filter: none !important;
+}
+
+@media (min-width: 640px) {
+  .animate-luxury-logo {
+    animation: luxuryLogoGlow 3.5s ease-in-out infinite, logoGradientFlow 4s ease-in-out infinite;
+    filter: none;
+  }
 }
 

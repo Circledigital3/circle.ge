@@ -82,7 +82,7 @@ export default function Header({ lang, setLang, translate }: HeaderProps) {
             id="logo-wrapper"
           >
             {/* Directly write circle in Dodger font */}
-            <span className="font-dodger text-2xl sm:text-3xl tracking-[0.05em] bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent transition-all duration-500 group-hover:scale-[1.06] group-hover:tracking-[0.07em] animate-luxury-logo">
+            <span className="font-dodger text-2xl sm:text-3xl tracking-[0.05em] bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent transition-all duration-500 group-hover:scale-[1.06] group-hover:tracking-[0.07em] animate-gradient-only">
               circle
             </span>
           </div>

@@ -55,7 +55,7 @@ export default function App() {
                 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-extra-black tracking-tight leading-[1.15] text-white"
               >
                 {translate.heroHeadingBefore}{' '}
-                <span className="inline-block bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent font-dodger tracking-[0.05em] text-[0.78em] filter drop-shadow-[0_0_12px_rgba(0,242,254,0.35)] animate-luxury-logo">
+                <span className="inline-block bg-gradient-to-r from-[#00F2FE] to-[#0099FF] bg-clip-text text-transparent font-dodger tracking-[0.05em] text-[0.78em] animate-none sm:animate-headline-glow">
                   circle
                 </span>
                 {translate.heroHeadingAfter}
@@ -200,7 +200,7 @@ export default function App() {
                 </div>
                 
                 {/* Gradient Styled Dodger ircle Text */}
-                <span className="font-dodger text-4xl sm:text-5xl md:text-6xl lg:text-6xl tracking-snug bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent filter drop-shadow-[0_0_10px_rgba(0,242,254,0.25)] -ml-10 sm:-ml-12 md:-ml-14 z-10 animate-luxury-logo">
+                <span className="font-dodger text-4xl sm:text-5xl md:text-6xl lg:text-6xl tracking-snug bg-gradient-to-r from-[#00F2FE] via-[#6A00FF] to-[#0099FF] bg-clip-text text-transparent -ml-10 sm:-ml-12 md:-ml-14 z-10 animate-gradient-only">
                   ircle
                 </span>
               </div>

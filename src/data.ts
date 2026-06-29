@@ -78,7 +78,7 @@ export const SERVICES_DATA: Record<'en' | 'ka', ServiceDetail[]> = {
       iconName: 'TrendingUp',
       title: 'მარკეტინგული სტრატეგია და ზრდა',
       tagline: 'მონაცემებზე დაფუძნებული სტრატეგიები და ეფექტური მარკეტინგული გადაწყვეტილებები ბიზნესის ზრდისთვის.',
-      description: 'სარეკლამო ბიუჯეტების მართვა მაქსიმალური ROI-ს დასაფიქსირებლად. Search/PPC რეკლამები Google-ში, ტარგეტირება Meta-სა და TikTok-ზე გაყიდვების უპრეცედენტო ზრდისთვის.',
+      description: '',
       detailedPoints: [
         'მარკეტინგული სტრატეგია',
         'ბაზრის კვლევა',
